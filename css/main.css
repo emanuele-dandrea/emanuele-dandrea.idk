@@ -3,7 +3,6 @@
     --padding: 1em;
     --p-font-size: 1.2em;
     --h-font-size: 1.4em;
-    /* Light color scheme */
     --bg-color: #f9f8f6;
     --fg-color: #f5f5f0;
     --border-color: #e0d9d9;
@@ -17,19 +16,14 @@ a {
     font-size: var(--p-font-size);
 }
 
-* {
-    font-family: sans-serif;
-}
-
 body {
     min-height: 100vh;
     display: grid;
     justify-content: center;
     grid-template-rows: auto 1fr auto;
-    margin: 1%;
     background-color: var(--bg-color);
+    font-family: sans-serif;
 }
-
 
 footer,
 main {
@@ -56,6 +50,7 @@ header {
 }
 
 main {
+    margin-bottom: 1em;
     padding: 1em;
     article {
         padding: var(--padding);
@@ -67,7 +62,7 @@ main {
     a > article {
         border: 2px solid var(--fg-color);
         border-radius: var(--border-radius);
-        transition: border-color ease-in-out 0.3s;
+        transition: border-color ease-in-out 0.3s 50ms;
     }
     a:hover > article {
         border-color: var(--border-color);
@@ -80,11 +75,15 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 2em;
+    border-radius: 0.8em 0.8em 0 0;
+    border-bottom: none;
+    a {
+        transition: color ease-in-out 0.3s;
+    }
     p {
-        a {
+        a{
             text-decoration: underline;
             text-underline-offset: 0.3em;
-            transition: color ease-in-out 0.3;
             font-size: 1.2rem;
         }
         a:hover {
@@ -93,12 +92,16 @@ footer {
     }
 }
 
+.page-top {
+    display: flex;
+    align-items: center;
+}
+
 .page-top::after {
     content: "\F139";
     font-family: bootstrap-icons;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     margin-left: 0.4rem;
-    transition: color ease-in-out 0.3s;
 }
 
 a:hover.page-top {
@@ -114,19 +117,25 @@ a:hover.page-top {
     cursor: default;
 }
 
+.active {
+    background-color: gray;
+    color: var(--bg-color);
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 0 lightgrey;
+}
+
 figure {
-    padding: 2em;
+    padding: 0em 1em 0 1em;
     color: var(--txt-color);
+    button{
+        background-color: transparent;
+        font-size: 1.5em;
+        color: var(--txt-color);
+        border: none;
+        cursor: pointer;
+    }
 }
-
-button {
-    background-color: transparent;
-    font-size: 1.5em;
-    color: var(--txt-color);
-    border: none;
-    cursor: pointer;
-}
-
 
 blockquote::before {
   content: open-quote;
@@ -137,6 +146,9 @@ blockquote::after {
 }
 
 @media(max-width: 900px) {
+    body {
+        margin: 0 3% 0 3%;
+    }
     header, main, footer {
         width: 100%;
     }
@@ -145,5 +157,8 @@ blockquote::after {
         align-items: center;
         text-align: center;
         gap: 1em;
+        .page-top {
+            font-size: 2em;
+        }
     }
 }
