@@ -1,0 +1,1 @@
+const header=document.querySelector(".header"),toggle=document.querySelector(".menu-toggle");toggle.addEventListener("click",()=>{header.classList.toggle("menu-open")})
