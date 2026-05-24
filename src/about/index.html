@@ -4,36 +4,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/main.css?v=1" />
-  <link rel="stylesheet" href="/about.css" />
-  <link rel="stylesheet" href="../styles/about.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+  <link rel="stylesheet" href="/css/main.css?v=1" />
+  <link rel="stylesheet" href="/css/fontello.css">
 
   <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
-  <title>Emanuele D'Andrea | About</title>
+  <title>About | Emanuele D'Andrea</title>
 </head>
 
-<body class="width">
+<body>
   <input type="checkbox" id="menu-toggle" />
 
-  <header class="flex-wrapper padding">
-    <div class="header-top">
+  <header class="flex-wrapper">
+    <div class="header-top flex-wrapper">
       <h1 class="logo"><a href="/" title="Go to homepage">Emanuele D'Andrea</a></h1>
 
       <label for="menu-toggle" class="menu-icon">
-        <svg class="icon-open" viewBox="0 0 100 80" width="30" height="30">
-          <rect width="100" height="10"></rect>
-          <rect y="30" width="100" height="10"></rect>
-          <rect y="60" width="100" height="10"></rect>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-open">
+          <rect width="18" height="18" x="3" y="3" rx="2" />
+          <path d="M7 8h10" />
+          <path d="M7 12h10" />
+          <path d="M7 16h10" />
         </svg>
 
-        <svg class="icon-close" viewBox="0 0 100 100" width="30" height="30">
-          <line x1="10" y1="10" x2="90" y2="90" stroke-width="10" />
-          <line x1="90" y1="10" x2="10" y2="90" stroke-width="10" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-close">
+          <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+          <path d="m15 9-6 6" />
+          <path d="m9 9 6 6" />
         </svg>
       </label>
     </div>
@@ -46,39 +49,38 @@
     </nav>
   </header>
 
-  <div class="nav-buffer"></div>
-
-  <main id="main-aboutpage" class="flex-wrapper-column padding">
-    <div class="profile-wrapper flex-wrapper gap">
-      <img src="/assets/avatar.webp" alt="Profile picture" draggable="false" />
+  <main id="main-aboutpage" class="flex-wrapper-column">
+    <div class="profile-wrapper flex-wrapper">
+      <img src="/assets/images/avatar.webp" alt="Profile picture" draggable="false" />
       <div class="presentation">
         <h2>Hi, I'm Emanuele</h2>
         <p>
-          Honestly I don't know how to describe myself in a good way, so i will say few useless things. I'm from Italy,
-          I'm a student and I like reading books. I always want to learn new things. That's it, maybe.
+          Honestly I don't know the appropriate way to describe myself, so i will say few irrelevant things (probably to
+          you but not to me). I'm from Italy,
+          I'm a student, I like reading books and watching anime. I always want to learn new things. That's it, maybe.
         </p>
       </div>
     </div>
-    <div class="links-wrapper">
-      <a href="https://app.thestorygraph.com/profile/emanuele_">
-        <img src="/assets/icons/thestorygraph.svg" alt="" title="Reach me on The StoryGraph" />
+    <div class="links-wrapper flex-wrapper">
+      <a href="https://app.thestorygraph.com/profile/emanuele_" title="View my profile on The StoryGraph">
+        <i class="icon-the-story-graph"></i>
       </a>
-      <a href="mailto:emanueledandrea@proton.me">
-        <img src="/assets/icons/protonmail.svg" alt="" title="Send me a mail" />
+      <a href="mailto:emanueledandrea@proton.me" title="Contact me">
+        <i class="icon-proton-mail"></i>
       </a>
-      <a href="https://github.com/emanuele-dandrea">
-        <img src="/assets/icons/github.svg" alt="" title="Reach me on GitHub" />
+      <a href="https://github.com/emanuele-dandrea" title="View my GitHub profile">
+        <i class="icon-github"></i>
       </a>
-      <a href="#">
-        <img src="/assets/icons/myanimelist.svg" alt="" title="View MyAnimeList" />
+      <a href="https://anilist.co/user/manu3147/animelist" title="View my AniList">
+        <i class="icon-anilist"></i>
       </a>
-      <a href="https://exercism.org/profiles/emanuele-dandrea">
-        <img src="/assets/icons/exercism.svg" alt="" title="Reach me on Exercism" />
+      <a href="https://exercism.org/profiles/emanuele-dandrea" title="View my profile on Exercism">
+        <i class="icon-exercism"></i>
       </a>
     </div>
   </main>
 
-  <footer class="flex-wrapper gap">
+  <footer class="flex-wrapper">
     <a href="#" p class="page-top flex-wrapper">Top</a>
     <p>
       &COPY; 2025-2026 Emanuele D'Andrea. This website is licensed under the MIT

@@ -5,10 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Will AI be used to commit atrocities?</title>
-  <link rel="stylesheet" href="/main.css">
-  <link rel="stylesheet" href="/post.css">
-  <link rel="stylesheet" href="../../styles/post.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="/css/main.css?v=1" />
+  <link rel="stylesheet" href="/css/fontello.css">
 
   <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
@@ -30,23 +28,27 @@
   <meta name="robots" content="index, follow">
 </head>
 
-<body class="width">
+<body>
   <input type="checkbox" id="menu-toggle" />
 
-  <header class="flex-wrapper padding">
-    <div class="header-top">
+  <header class="flex-wrapper">
+    <div class="header-top flex-wrapper">
       <p class="logo"><a href="/" title="Go to homepage">Emanuele D'Andrea</a></p>
 
       <label for="menu-toggle" class="menu-icon">
-        <svg class="icon-open" viewBox="0 0 100 80" width="30" height="30">
-          <rect width="100" height="10"></rect>
-          <rect y="30" width="100" height="10"></rect>
-          <rect y="60" width="100" height="10"></rect>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-open">
+          <rect width="18" height="18" x="3" y="3" rx="2" />
+          <path d="M7 8h10" />
+          <path d="M7 12h10" />
+          <path d="M7 16h10" />
         </svg>
 
-        <svg class="icon-close" viewBox="0 0 100 100" width="30" height="30">
-          <line x1="10" y1="10" x2="90" y2="90" stroke-width="10" />
-          <line x1="90" y1="10" x2="10" y2="90" stroke-width="10" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-close">
+          <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+          <path d="m15 9-6 6" />
+          <path d="m9 9 6 6" />
         </svg>
       </label>
     </div>
@@ -58,8 +60,6 @@
     </nav>
   </header>
 
-  <div class="nav-buffer"></div>
-
   <main>
     <article>
       <time datetime="2026-04-24">April 24, 2026 <i>Draft</i></time>
@@ -69,9 +69,9 @@
           About two weeks ago I have done the Italian written test,
           it was an essay on ethical use of Artificial Intelligence.
           The result was not perfect probably because my very bad capacity of exposure.
-          The content was there, but I don't have "expanded the concepts", so the result was a very sad score of 7/10;
+          The content was there, but I didn't expand the concepts, so the result was a very sad score of 7/10;
           what to say, a mediocre result.
-          So I kept the rough draft and, after rewriting it decently in Italian (at least I tried to improve my
+          I kept the rough draft and, after rewriting it decently in Italian (at least I tried to improve my
           shrank lexical skills), for some reasons I have decided to write it in English.
           Anyway that's why I'm here now.
         </p>
@@ -89,7 +89,7 @@
       <section id="introduction">
         <h2>Introduction</h2>
         <p>
-          The Artificial Intelligence have started the fifth Industrial Revolution and also and similarly to the first
+          Artificial Intelligence has started the fifth Industrial Revolution and also and similarly to the first
           It could have a positive or negative impact, so it also depends on human adaptation to new technologies, which
           has not always been optimal. Is true that Artificial Intelligence is capable to generate human-like works, but
           in
@@ -113,7 +113,7 @@
           estimated to amount
           to
           around 415 terawatt hours (TWh), or about 1.5% of global electricity consumption in 2024. It has grown at 12%
-          per year over the last five years. According to the IEA<sup><a href="#ref1">[1]</a></sup> (International
+          per year over the last five years. According to the IEA<sup><a href="#ref1">1</a></sup> (International
           Energy Agency) the global electricity consumption for data centres
           is projected to double to reach around 945 TWh by 2030 in the Base Case, representing just under 3% of total
           global electricity consumption in 2030. To put this into perspective, this is much more than all of Austria
@@ -135,7 +135,7 @@
           adaptability after deployment, and which, for explicit or implicit purposes, infers from inputs how to
           generate
           outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual
-          environments."<sup><a href="#ref2">[2]</a></sup>
+          environments."<sup><a href="#ref2">2</a></sup>
         </blockquote>
 
         <p>
@@ -158,8 +158,8 @@
       <section id="agentic-misalignment">
         <h2>Anthropic's research on agentic misalignment</h2>
         <p>
-          On June 20, 2025, <a href="https://en.wikipedia.org/wiki/Anthropic"
-            class="external-link">Anthropic</a> published a groundbreaking article<sup><a href=" #ref3">[3]</a></sup>
+          On June 20, 2025, <a href="https://en.wikipedia.org/wiki/Anthropic" class="external-link">Anthropic</a>
+          published a groundbreaking article<sup><a href=" #ref3">3</a></sup>
           highlighting the phenomenon of agentic misalignment. In this article, they explained how they simulated
           several situations and how AI emerged as an
           internal danger to companies, individuals and also in a broader perspective we can also
@@ -189,7 +189,7 @@
           could be misused, such as to commit crime by ordinary people or war crimes committed by political entities
           against sovereign states.<br><br>
           Balanced AI antagonism is essential and risks remain, especially since I've read that the Trump administration
-          is blackmailing Anthropic<sup><a href="#ref4">[4]</a></sup> into making a deal with the Department of Defense
+          is blackmailing Anthropic<sup><a href="#ref4">4</a></sup> into making a deal with the Department of Defense
           (actually, the Department of War), I'm very skeptical about the ethics (as well as the morality) of this deal
           and the people who want to
           implement it.
@@ -202,7 +202,7 @@
         <blockquote>
           "The vast majority of discourse around AI development assumes that subservient, "moral" models aligned with
           "human values" are universally beneficial -- in short, that good AI is sycophantic AI."<sup><a
-              href="#ref5">[5]</a></sup>
+              href="#ref5">5</a></sup>
         </blockquote>
 
         <p>
@@ -212,40 +212,40 @@
           certainly must not be those of the Trump administration or totalitarian governments of any kind.
           <br>
           <br>
-          I didn't even mention the <a href="https://en.wikipedia.org/wiki/AI_bubble"
-            class="external-link">AI bubble</a> lol.
+          I didn't even mention the <a href="https://en.wikipedia.org/wiki/AI_bubble" class="external-link">AI
+            bubble</a> lol.
         </p>
       </section>
       <hr>
       <section id="references">
         <h3>References</h3>
 
-        <section class="ref" id="ref1"><sup>[1]</sup><a href="https://www.iea.org/reports/energy-and-ai"
+        <section class="ref" id="ref1"><sup>1</sup><a href="https://www.iea.org/reports/energy-and-ai"
             class="external-link">IEA (2025),
             Energy and AI, IEA, Paris https://www.iea.org/reports/energy-and-ai, Licence: CC BY 4.0.</a></section>
 
-        <section class="ref" id="ref2"><sup>[2]</sup><a href="https://it.wikipedia.org/wiki/Intelligenza_artificiale"
+        <section class="ref" id="ref2"><sup>2</sup><a href="https://it.wikipedia.org/wiki/Intelligenza_artificiale"
             class="external-link">Wikipedia IT, Intelligenza artificiale,
             https://it.wikipedia.org/wiki/Intelligenza_artificiale, Licence: CC BY-SA 4.0.</a></section>
 
-        <section class="ref" id="ref3"><sup>[3]</sup><a href="https://www.anthropic.com/research/agentic-misalignment"
+        <section class="ref" id="ref3"><sup>3</sup><a href="https://www.anthropic.com/research/agentic-misalignment"
             class="external-link">Lynch, et al., "Agentic Misalignment: How
             LLMs Could be an Insider Threat", Anthropic Research, 2025.</a></section>
 
-        <section class="ref" id="ref4"><sup>[4]</sup><a
+        <section class="ref" id="ref4"><sup>4</sup><a
             href="https://en.wikipedia.org/wiki/Anthropic%E2%80%93United_States_Department_of_Defense_dispute"
             class="external-link">Wikipedia
             contributors. "Anthropic–United States Department of Defense dispute."
             Wikipedia, The Free Encyclopedia, 23 Apr. 2026. Web. 25 Apr. 2026.</a></section>
 
-        <section class="ref" id="ref5"><sup>[5]</sup><a href="https://arxiv.org/abs/2402.07350"
+        <section class="ref" id="ref5"><sup>5</sup><a href="https://arxiv.org/abs/2402.07350"
             class="external-link">Artificial
             Intelligence (cs.AI); Human-Computer Interaction (cs.HC).</a></section>
       </section>
     </article>
   </main>
 
-  <footer class="flex-wrapper gap">
+  <footer class="flex-wrapper">
     <a href="#" p class="page-top flex-wrapper">Top</a>
     <p>
       &COPY; 2026 Emanuele D'Andrea. This work is licensed under <a
