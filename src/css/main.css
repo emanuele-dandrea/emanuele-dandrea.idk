@@ -99,6 +99,11 @@ body> :is(header, main, footer) {
   margin-inline: auto;
 }
 
+main {
+  margin-bottom: 2rem;
+  padding: var(--padding);
+}
+
 time {
   color: var(--txt-color);
 
@@ -110,14 +115,29 @@ p,
 a,
 svg {
   color: var(--txt-color);
-  text-decoration: none;
   font-size: 1rem;
 }
 
+figcaption>a, figcaption {
+  text-decoration: underline;
+  font-size: .7rem;
+  color: var(--txt-color);
+}
+
+figcaption {
+  text-decoration: none;
+}
+
 a {
+  text-decoration: none;
   transition: text-decoration-color 200ms ease-out, color 200ms ease-out;
 }
 
+abbr {
+  cursor: help;
+}
+
+/* || UTILITY */
 :focus-visible {
   outline: none;
   border-radius: var(--border-radius);
@@ -154,6 +174,42 @@ a {
   transition: transform ease-out 100ms;
 }
 
+.article-wrapper a:not(figure a) {
+  display: block;
+}
+
+/* || POST */
+p#opening::first-letter {
+  float: left;
+  margin-right: .5rem;
+
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 3.5rem;
+
+  color: lightgray;
+  text-shadow: gray .2rem .2rem;
+}
+
+main:has(h1) {
+  padding: calc(var(--padding) * 2);
+}
+
+article section :is(h1, h2, h3, h4, h5, h6) {
+  margin-block: .5rem;
+}
+
+article a {
+  text-decoration: underline;
+}
+
+main article ul {
+  margin-left: 2rem;
+
+  color: var(--txt-color);
+}
+
 article>figure {
   margin: 2rem auto;
   width: 90%;
@@ -162,91 +218,37 @@ article>figure {
 figure>img {
   border-radius: var(--border-radius);
 }
-figcaption {
-  font-size: .7rem;
-  color: var(--txt-color);
-}
-
-figcaption>a {
-  font-size: .7rem;
-  text-decoration: underline;
-}
 
 blockquote {
-  color: var(--txt-color);
   margin: 1rem;
+  padding: var(--padding) calc(var(--padding) * 2);
+  border-radius: var(--border-radius);
+  border-left: .2rem solid var(--txt-color);
+
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
-  border-left: .2rem solid var(--txt-color);
-  padding: var(--padding) calc(var(--padding) * 2);
+
+  color: var(--txt-color);
   background-color: var(--fg-color);
-  border-radius: var(--border-radius);
-}
-
-abbr {
-  cursor: help;
-}
-
-.article-wrapper a:not(figure a) {
-  display: block;
-}
-
-p#opening::first-letter {
-  float: left;
-  font-size: 3.5rem;
-  line-height: 1.5;
-  font-weight: bold;
-  margin-right: .5rem;
-  color: lightgray;
-  font-family: "Times New Roman", Times, serif;
-  text-shadow: gray .2rem .2rem;
-}
-
-/* POST */
-:is(h1, h2, h3, h4, h5, h6) {
-  color: var(--txt-color);
-  margin-bottom: .5rem;
-  cursor: default;
-}
-
-article section :is(h1, h2, h3, h4, h5, h6) {
-  margin-block: .5rem;
-}
-
-article a,
-figcaption>a {
-  text-decoration: underline;
-}
-
-main {
-  margin-bottom: 2rem;
-  padding: var(--padding);
-}
-
-main article ul {
-  margin-left: 2rem;
-  color: var(--txt-color);
 }
 
 /* Footnotes */
 sup,
 sup a {
+  display: inline-block;
+  padding: .17em;
+
   line-height: .4;
   font-size: .8em;
-  display: inline-block;
   font-style: normal;
   font-family: sans-serif;
-  padding: .17em;
-}
-
-main:has(h1) {
-  padding: calc(var(--padding) * 2);
 }
 
 section#references sup {
   padding: 0;
   margin-right: .3em;
   display: inline-block;
+
   color: var(--txt-color);
 }
 
@@ -267,28 +269,35 @@ hr {
 
 @keyframes highlightFade {
   from {
-    box-shadow: 0 0 0 .4rem hsl(from var(--txt-color) h s l / .4);
     border-radius: var(--border-radius);
+    box-shadow: 0 0 0 .4rem hsl(from var(--txt-color) h s l / .4);
     background-color: hsl(from var(--txt-color) h s l / .4);
   }
 
   to {
-    box-shadow: 0 0 0 .4rem transparent;
     border-radius: var(--border-radius);
+    box-shadow: 0 0 0 .4rem transparent;
     background-color: transparent;
   }
 }
 
 /* HEADER */
+.icon-close {
+  display: none;
+}
+
 header {
-  flex-direction: column;
   position: static;
+
+  flex-direction: column;
   padding: calc(var(--padding) * 2);
 }
 
 .logo {
   margin: 0;
+
   font-weight: bold;
+
   cursor: default;
 }
 
@@ -302,9 +311,10 @@ header {
 }
 
 .menu-icon {
-  cursor: pointer;
-  padding: calc(var(--padding) / 10);
   display: inline-block;
+  padding: calc(var(--padding) / 10);
+
+  cursor: pointer;
 }
 
 .menu-icon svg {
@@ -318,10 +328,6 @@ nav {
 
 nav ul {
   list-style: none;
-}
-
-.icon-close {
-  display: none;
 }
 
 #menu-toggle:checked~header {
@@ -339,21 +345,24 @@ nav ul {
 }
 
 #menu-toggle:checked~header nav {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
 }
 
 label.menu-overlay {
-  background-color: hsl(from var(--txt-color) h s l / .2);
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
+
+  display: none;
   width: 100%;
   height: 100%;
-  z-index: 999;
+
+  background-color: hsl(from var(--txt-color) h s l / .2);
+
   cursor: pointer;
-  display: none;
 }
 
 #menu-toggle:checked~label.menu-overlay {
@@ -361,7 +370,7 @@ label.menu-overlay {
 }
 
 #menu-toggle:checked~header .header-top {
-  border-bottom: .1rem solid hsl(from var(--hover-color) h s l / .5);
+  border-bottom: .15rem solid hsl(from var(--txt-color) h s l / 1);
   padding-bottom: calc(var(--padding) * .5);
 }
 
@@ -389,9 +398,10 @@ a.active {
 
 header nav ul li {
   display: flex;
-  border-radius: var(--border-radius);
   margin-block: .5rem;
   width: 100%;
+  border-radius: var(--border-radius);
+
   text-align: center;
 }
 
@@ -415,18 +425,14 @@ header ul a {
 
   #menu-toggle:checked~header {
     position: static;
-    background: transparent;
-    height: auto;
-    box-shadow: none;
-    margin-inline: auto;
 
     width: min(43rem, 100% - .4rem);
     padding: calc(var(--padding) * 2);
-  }
+    height: auto;
+    margin-inline: auto;
 
-  header ul a {
-    width: auto;
-    padding: var(--padding);
+    background: transparent;
+    box-shadow: none;
   }
 
   #menu-toggle:checked~header nav {
@@ -436,7 +442,7 @@ header ul a {
 
   #menu-toggle:checked~header .header-top {
     border-bottom: none;
-    padding-bottom: non;
+    padding-bottom: 0;
   }
 
   #menu-toggle:checked~header nav ul a.active {
@@ -450,6 +456,11 @@ header ul a {
     flex-direction: row;
     justify-content: center;
     margin: 0;
+  }
+
+  header ul a {
+    width: auto;
+    padding: var(--padding);
   }
 
   header {
@@ -479,9 +490,15 @@ header ul a {
   }
 }
 
-/* BLOG */
+/* || HOMEPAGE */
 a article h2 {
   cursor: pointer;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  margin-bottom: .5rem;
+  color: var(--txt-color);
+  cursor: default;
 }
 
 .main-homepage article {
@@ -491,8 +508,6 @@ a article h2 {
 
 .main-homepage a>article {
   border-radius: var(--border-radius);
-
-  will-change: transition;
   transition: box-shadow ease-out 200ms;
 }
 
@@ -507,10 +522,11 @@ main div figure {
 
 .main-homepage article>p {
   display: -webkit-box;
+  overflow: hidden;
+
   line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .main-homepage h2 {
@@ -537,9 +553,9 @@ main#main-aboutpage {
 }
 
 .links-wrapper {
+  flex-wrap: wrap;
   justify-content: center;
   gap: var(--gap);
-  flex-wrap: wrap;
 }
 
 .links-wrapper i {
@@ -571,8 +587,9 @@ main#main-aboutpage {
 footer {
   padding: calc(var(--padding) * 2);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
-  background-color: var(--fg-color);
   gap: var(--gap);
+
+  background-color: var(--fg-color);
 }
 
 footer p a {
@@ -581,11 +598,12 @@ footer p a {
 }
 
 .page-top::after {
+  display: inline-block;
+  margin-left: .8em;
+
   content: "\E808";
   font-family: "fontello";
   font-size: .8em;
-  display: inline-block;
-  margin-left: .8em;
   vertical-align: .175em;
 
   will-change: transform;
@@ -639,10 +657,6 @@ footer p a {
 
   .external-link:hover::after {
     transform: translateY(-.1rem);
-  }
-
-  a:hover {
-    text-decoration-color: var(--bg-color);
   }
 
   a:hover.active {
